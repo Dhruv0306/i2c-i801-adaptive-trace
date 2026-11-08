@@ -1,0 +1,45 @@
+# Kernel module build output
+*.o
+*.ko
+*.mod
+*.mod.c
+*.cmd
+.*.cmd
+*.symvers
+*.order
+.tmp_versions/
+modules.order
+Module.symvers
+
+# Kernel tree (never commit it; the repo holds patches and tools only)
+linux-*/
+*.tar.xz
+*.tar.gz
+
+# Build config and artifacts
+.config
+.config.old
+vmlinux
+*.a
+*.elf
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Editors and OS
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Local scratch (keep logs/ and patches/, they are deliverables)
+scratch/
+tmp/
+*.orig
+*.rej
