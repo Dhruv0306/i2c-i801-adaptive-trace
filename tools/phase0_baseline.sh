@@ -18,7 +18,7 @@ uname -a
 uname -r
 
 section "i801 driver messages (dmesg)"
-dmesg | grep -i i801
+dmesg | grep -E 'i801_smbus|ee1004|i2c i2c-'
 
 section "SMBus PCI device and bound driver"
 lspci -nnk -s 00:1f.4
