@@ -1,0 +1,163 @@
+
+===== date / kernel =====
+2026-11-08T12:09:55+05:30
+Linux user 7.2.15-netquota #1 SMP PREEMPT_DYNAMIC Tue Nov  3 19:20:54 IST 2026 x86_64 x86_64 x86_64 GNU/Linux
+7.2.15-netquota
+
+===== i801 driver messages (dmesg) =====
+[    6.335175] i801_smbus 0000:00:1f.4: SPD Write Disable is set
+[    6.335233] i801_smbus 0000:00:1f.4: SMBus using PCI interrupt
+[325774.893789] audit: type=1400 audit(1794118856.269:188): apparmor="DENIED" operation="open" class="file" profile="snap.firefox.firefox" name="/home/USER/Downloads/i2c-i801-adaptive-trace/phase0-20261108-115028.log" pid=18419 comm=4261636B67726F7E6F6F6C20233430 requested_mask="r" denied_mask="r" fsuid=1001 ouid=0
+[325774.934900] audit: type=1400 audit(1794118856.310:189): apparmor="DENIED" operation="open" class="file" profile="snap.firefox.firefox" name="/home/USER/Downloads/i2c-i801-adaptive-trace/phase0-20261108-115028.log" pid=18419 comm=496E64657865647E494F2023313934 requested_mask="r" denied_mask="r" fsuid=1001 ouid=0
+[325774.935645] audit: type=1400 audit(1794118856.311:190): apparmor="DENIED" operation="open" class="file" profile="snap.firefox.firefox" name="/home/USER/Downloads/i2c-i801-adaptive-trace/phase0-20261108-115028.log" pid=18419 comm=53747265616D547E73202337353439 requested_mask="r" denied_mask="r" fsuid=1001 ouid=0
+
+===== SMBus PCI device and bound driver =====
+00:1f.4 SMBus [0c05]: Intel Corporation Alder Lake-S PCH SMBus Controller [8086:7aa3] (rev 11)
+	DeviceName: Onboard - Other
+	Subsystem: Lenovo Alder Lake-S PCH SMBus Controller [17aa:32e6]
+	Kernel driver in use: i801_smbus
+	Kernel modules: i2c_i801
+
+===== i2c adapters =====
+i2c-0	i2c       	Synopsys DesignWare I2C adapter 	I2C adapter
+i2c-1	i2c       	Synopsys DesignWare I2C adapter 	I2C adapter
+i2c-2	i2c       	Synopsys DesignWare I2C adapter 	I2C adapter
+i2c-3	i2c       	Synopsys DesignWare I2C adapter 	I2C adapter
+i2c-4	smbus     	SMBus I801 adapter at 0000:00:1f.4	SMBus adapter
+i2c-5	i2c       	i915 gmbus dpa                  	I2C adapter
+i2c-6	i2c       	i915 gmbus dpb                  	I2C adapter
+i2c-7	i2c       	i915 gmbus dpc                  	I2C adapter
+i2c-8	i2c       	i915 gmbus tc1                  	I2C adapter
+i2c-9	i2c       	i915 gmbus tc2                  	I2C adapter
+i2c-10	i2c       	i915 gmbus tc3                  	I2C adapter
+i2c-11	i2c       	i915 gmbus tc4                  	I2C adapter
+i2c-12	i2c       	i915 gmbus tc5                  	I2C adapter
+i2c-13	i2c       	i915 gmbus tc6                  	I2C adapter
+i2c-14	i2c       	AUX A/DDI A/PHY A               	I2C adapter
+i2c-15	i2c       	AUX USBC1/DDI TC1/PHY B         	I2C adapter
+total 0
+lrwxrwxrwx 1 root root 0 Nov  5 17:10 i2c-0 -> ../../../devices/pci0000:00/0000:00:15.0/i2c_designware.0/i2c-0
+lrwxrwxrwx 1 root root 0 Nov  5 17:10 i2c-1 -> ../../../devices/pci0000:00/0000:00:15.1/i2c_designware.1/i2c-1
+lrwxrwxrwx 1 root root 0 Nov  5 17:10 i2c-10 -> ../../../devices/pci0000:00/0000:00:02.0/i2c-10
+lrwxrwxrwx 1 root root 0 Nov  5 17:10 i2c-11 -> ../../../devices/pci0000:00/0000:00:02.0/i2c-11
+lrwxrwxrwx 1 root root 0 Nov  5 17:10 i2c-12 -> ../../../devices/pci0000:00/0000:00:02.0/i2c-12
+lrwxrwxrwx 1 root root 0 Nov  5 17:10 i2c-13 -> ../../../devices/pci0000:00/0000:00:02.0/i2c-13
+lrwxrwxrwx 1 root root 0 Nov  5 17:10 i2c-14 -> ../../../devices/pci0000:00/0000:00:02.0/drm/card1/card1-DP-1/i2c-14
+lrwxrwxrwx 1 root root 0 Nov  5 17:10 i2c-15 -> ../../../devices/pci0000:00/0000:00:02.0/drm/card1/card1-DP-2/i2c-15
+lrwxrwxrwx 1 root root 0 Nov  5 17:10 i2c-2 -> ../../../devices/pci0000:00/0000:00:15.2/i2c_designware.2/i2c-2
+lrwxrwxrwx 1 root root 0 Nov  5 17:10 i2c-3 -> ../../../devices/pci0000:00/0000:00:15.3/i2c_designware.3/i2c-3
+lrwxrwxrwx 1 root root 0 Nov  5 17:10 i2c-4 -> ../../../devices/pci0000:00/0000:00:1f.4/i2c-4
+lrwxrwxrwx 1 root root 0 Nov  5 17:10 i2c-5 -> ../../../devices/pci0000:00/0000:00:02.0/i2c-5
+lrwxrwxrwx 1 root root 0 Nov  5 17:10 i2c-6 -> ../../../devices/pci0000:00/0000:00:02.0/i2c-6
+lrwxrwxrwx 1 root root 0 Nov  5 17:10 i2c-7 -> ../../../devices/pci0000:00/0000:00:02.0/i2c-7
+lrwxrwxrwx 1 root root 0 Nov  5 17:10 i2c-8 -> ../../../devices/pci0000:00/0000:00:02.0/i2c-8
+lrwxrwxrwx 1 root root 0 Nov  5 17:10 i2c-9 -> ../../../devices/pci0000:00/0000:00:02.0/i2c-9
+
+===== clients bound to the SMBus (modules) =====
+ee1004                 16384  0
+i2c_i801               36864  0
+i2c_smbus              20480  1 i2c_i801
+i2c_mux                20480  1 i2c_i801
+
+===== memory type (decides the SPD driver) =====
+	Error Correction Type: None
+	Locator: DIMM1
+	Type: DDR4
+	Speed: 3200 MT/s
+	Configured Memory Speed: 3200 MT/s
+	Locator: DIMM2
+	Type: Unknown
+
+===== kernel config: running kernel =====
+CONFIG_LOCKDEP_SUPPORT=y
+CONFIG_I2C_SMBUS=m
+CONFIG_I2C_I801=m
+CONFIG_I2C_I801_MUX=y
+CONFIG_DEBUG_FS=y
+# CONFIG_DEBUG_KMEMLEAK is not set
+CONFIG_LOCKDEP=y
+CONFIG_LOCKDEP_BITS=15
+CONFIG_LOCKDEP_CHAINS_BITS=16
+CONFIG_LOCKDEP_STACK_TRACE_BITS=19
+CONFIG_LOCKDEP_STACK_TRACE_HASH_BITS=14
+CONFIG_LOCKDEP_CIRCULAR_QUEUE_BITS=12
+CONFIG_TRACING=y
+CONFIG_FTRACE=y
+
+===== kernel source tree: /usr/src/linux-7.2.15 =====
+drwxrwxr-x 27 root root 4096 Nov  3 19:21 /usr/src/linux-7.2.15
+arch
+block
+build.log
+built-in.a
+built-in-fixup.a
+certs
+COPYING
+CREDITS
+crypto
+Documentation
+drivers
+fs
+include
+init
+io_uring
+ipc
+Kbuild
+Kconfig
+kernel
+lib
+LICENSES
+MAINTAINERS
+Makefile
+mm
+modules.builtin
+modules.builtin.modinfo
+modules.builtin.ranges
+modules.order
+Module.symvers
+net
+--- git repo? ---
+no (tarball)
+--- Makefile version ---
+# SPDX-License-Identifier: GPL-2.0
+VERSION = 7
+PATCHLEVEL = 2
+SUBLEVEL = 15
+EXTRAVERSION =
+NAME = Baby Opossum Posse
+
+# *DOCUMENTATION*
+--- .config present? ---
+-rw-r--r-- 1 root root 307305 Nov  3 18:56 /usr/src/linux-7.2.15/.config
+--- i801 driver in tree ---
+-rw-rw-r-- 1 root root 55161 Nov  1 18:14 /usr/src/linux-7.2.15/drivers/i2c/busses/i2c-i801.c
+891:static s32 i801_access(struct i2c_adapter *adap, u16 addr,
+1605:		pci_dbg(dev, "SMBus using interrupt SMI#\n");
+1606:		/* Disable SMBus interrupt feature if SMBus using SMI# */
+1642:	pci_info(dev, "SMBus using %s\n",
+
+===== installed i2c_i801 module =====
+filename:       /lib/modules/7.2.15-netquota/kernel/drivers/i2c/busses/i2c-i801.ko
+srcversion:     9CEF5F7E9242FA7649406F5
+vermagic:       7.2.15-netquota SMP preempt mod_unload modversions 
+
+===== watchdog users (must be empty before any reload) =====
+ls: cannot access '/dev/watchdog*': No such file or directory
+Specified filename /dev/watchdog* does not exist.
+
+===== debugfs mounted? =====
+debugfs on /sys/kernel/debug type debugfs (rw,nosuid,nodev,noexec,relatime)
+
+===== tools available =====
+i2cdetect   /usr/sbin/i2cdetect
+i2cget      /usr/sbin/i2cget
+decode-dimms/usr/bin/decode-dimms
+sensors     /usr/bin/sensors
+dmidecode   /usr/sbin/dmidecode
+trace-cmd   /usr/bin/trace-cmd
+perf        /usr/bin/perf
+gcc         /usr/bin/gcc
+make        /usr/bin/make
+
+===== T1: read-only bus workload =====
+(see step 2: run by hand after you choose a device address)
