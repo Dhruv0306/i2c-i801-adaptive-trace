@@ -1,0 +1,53 @@
+cpus=20
+              dd-91054 [008] 429640.832485: smbus_write:          i2c-4 a=036 f=0000 c=0 BYTE l=0 [ARG TYPE NOT FIELD BUT 2]
+              dd-91054 [008] 429640.832996: smbus_result:         i2c-4 a=036 f=0000 c=0 BYTE wr res=0
+              dd-91054 [008] 429640.833000: smbus_read:           i2c-4 a=053 f=0000 c=0 I2C_BLOCK_DATA
+              dd-91054 [008] 429640.838647: smbus_reply:          i2c-4 a=053 f=0000 c=0 I2C_BLOCK_DATA l=33 [ARG TYPE NOT FIELD BUT 2]
+              dd-91054 [008] 429640.838648: smbus_result:         i2c-4 a=053 f=0000 c=0 I2C_BLOCK_DATA rd res=0
+              dd-91054 [008] 429640.838652: smbus_read:           i2c-4 a=053 f=0000 c=20 I2C_BLOCK_DATA
+              dd-91054 [008] 429640.844316: smbus_reply:          i2c-4 a=053 f=0000 c=20 I2C_BLOCK_DATA l=33 [ARG TYPE NOT FIELD BUT 2]
+              dd-91054 [008] 429640.844316: smbus_result:         i2c-4 a=053 f=0000 c=20 I2C_BLOCK_DATA rd res=0
+              dd-91054 [008] 429640.844319: smbus_read:           i2c-4 a=053 f=0000 c=40 I2C_BLOCK_DATA
+              dd-91054 [008] 429640.850003: smbus_reply:          i2c-4 a=053 f=0000 c=40 I2C_BLOCK_DATA l=33 [ARG TYPE NOT FIELD BUT 2]
+              dd-91054 [008] 429640.850003: smbus_result:         i2c-4 a=053 f=0000 c=40 I2C_BLOCK_DATA rd res=0
+              dd-91054 [008] 429640.850006: smbus_read:           i2c-4 a=053 f=0000 c=60 I2C_BLOCK_DATA
+              dd-91054 [008] 429640.855903: smbus_reply:          i2c-4 a=053 f=0000 c=60 I2C_BLOCK_DATA l=33 [ARG TYPE NOT FIELD BUT 2]
+              dd-91054 [008] 429640.855904: smbus_result:         i2c-4 a=053 f=0000 c=60 I2C_BLOCK_DATA rd res=0
+              dd-91054 [008] 429640.855907: smbus_read:           i2c-4 a=053 f=0000 c=80 I2C_BLOCK_DATA
+              dd-91054 [008] 429640.861938: smbus_reply:          i2c-4 a=053 f=0000 c=80 I2C_BLOCK_DATA l=33 [ARG TYPE NOT FIELD BUT 2]
+              dd-91054 [008] 429640.861939: smbus_result:         i2c-4 a=053 f=0000 c=80 I2C_BLOCK_DATA rd res=0
+              dd-91054 [008] 429640.861941: smbus_read:           i2c-4 a=053 f=0000 c=a0 I2C_BLOCK_DATA
+              dd-91054 [008] 429640.868007: smbus_reply:          i2c-4 a=053 f=0000 c=a0 I2C_BLOCK_DATA l=33 [ARG TYPE NOT FIELD BUT 2]
+              dd-91054 [008] 429640.868008: smbus_result:         i2c-4 a=053 f=0000 c=a0 I2C_BLOCK_DATA rd res=0
+              dd-91054 [008] 429640.868012: smbus_read:           i2c-4 a=053 f=0000 c=c0 I2C_BLOCK_DATA
+              dd-91054 [008] 429640.874206: smbus_reply:          i2c-4 a=053 f=0000 c=c0 I2C_BLOCK_DATA l=33 [ARG TYPE NOT FIELD BUT 2]
+              dd-91054 [008] 429640.874207: smbus_result:         i2c-4 a=053 f=0000 c=c0 I2C_BLOCK_DATA rd res=0
+              dd-91054 [008] 429640.874214: smbus_read:           i2c-4 a=053 f=0000 c=e0 I2C_BLOCK_DATA
+              dd-91054 [008] 429640.880332: smbus_reply:          i2c-4 a=053 f=0000 c=e0 I2C_BLOCK_DATA l=33 [ARG TYPE NOT FIELD BUT 2]
+              dd-91054 [008] 429640.880334: smbus_result:         i2c-4 a=053 f=0000 c=e0 I2C_BLOCK_DATA rd res=0
+              dd-91054 [008] 429640.880340: smbus_write:          i2c-4 a=037 f=0000 c=0 BYTE l=0 [ARG TYPE NOT FIELD BUT 2]
+              dd-91054 [008] 429640.880809: smbus_result:         i2c-4 a=037 f=0000 c=0 BYTE wr res=0
+              dd-91054 [008] 429640.880816: smbus_read:           i2c-4 a=053 f=0000 c=0 I2C_BLOCK_DATA
+              dd-91054 [008] 429640.886991: smbus_reply:          i2c-4 a=053 f=0000 c=0 I2C_BLOCK_DATA l=33 [ARG TYPE NOT FIELD BUT 2]
+              dd-91054 [008] 429640.886992: smbus_result:         i2c-4 a=053 f=0000 c=0 I2C_BLOCK_DATA rd res=0
+              dd-91054 [008] 429640.886999: smbus_read:           i2c-4 a=053 f=0000 c=20 I2C_BLOCK_DATA
+              dd-91054 [008] 429640.893120: smbus_reply:          i2c-4 a=053 f=0000 c=20 I2C_BLOCK_DATA l=33 [ARG TYPE NOT FIELD BUT 2]
+              dd-91054 [008] 429640.893122: smbus_result:         i2c-4 a=053 f=0000 c=20 I2C_BLOCK_DATA rd res=0
+              dd-91054 [008] 429640.893172: smbus_read:           i2c-4 a=053 f=0000 c=40 I2C_BLOCK_DATA
+              dd-91054 [008] 429640.898842: smbus_reply:          i2c-4 a=053 f=0000 c=40 I2C_BLOCK_DATA l=33 [ARG TYPE NOT FIELD BUT 2]
+              dd-91054 [008] 429640.898844: smbus_result:         i2c-4 a=053 f=0000 c=40 I2C_BLOCK_DATA rd res=0
+              dd-91054 [008] 429640.898851: smbus_read:           i2c-4 a=053 f=0000 c=60 I2C_BLOCK_DATA
+              dd-91054 [010] 429640.904770: smbus_reply:          i2c-4 a=053 f=0000 c=60 I2C_BLOCK_DATA l=33 [ARG TYPE NOT FIELD BUT 2]
+              dd-91054 [010] 429640.904771: smbus_result:         i2c-4 a=053 f=0000 c=60 I2C_BLOCK_DATA rd res=0
+              dd-91054 [010] 429640.904778: smbus_read:           i2c-4 a=053 f=0000 c=80 I2C_BLOCK_DATA
+              dd-91054 [010] 429640.910891: smbus_reply:          i2c-4 a=053 f=0000 c=80 I2C_BLOCK_DATA l=33 [ARG TYPE NOT FIELD BUT 2]
+              dd-91054 [010] 429640.910891: smbus_result:         i2c-4 a=053 f=0000 c=80 I2C_BLOCK_DATA rd res=0
+              dd-91054 [010] 429640.910895: smbus_read:           i2c-4 a=053 f=0000 c=a0 I2C_BLOCK_DATA
+              dd-91054 [010] 429640.917018: smbus_reply:          i2c-4 a=053 f=0000 c=a0 I2C_BLOCK_DATA l=33 [ARG TYPE NOT FIELD BUT 2]
+              dd-91054 [010] 429640.917019: smbus_result:         i2c-4 a=053 f=0000 c=a0 I2C_BLOCK_DATA rd res=0
+              dd-91054 [010] 429640.917026: smbus_read:           i2c-4 a=053 f=0000 c=c0 I2C_BLOCK_DATA
+              dd-91054 [010] 429640.923201: smbus_reply:          i2c-4 a=053 f=0000 c=c0 I2C_BLOCK_DATA l=33 [ARG TYPE NOT FIELD BUT 2]
+              dd-91054 [010] 429640.923202: smbus_result:         i2c-4 a=053 f=0000 c=c0 I2C_BLOCK_DATA rd res=0
+              dd-91054 [010] 429640.923209: smbus_read:           i2c-4 a=053 f=0000 c=e0 I2C_BLOCK_DATA
+              dd-91054 [010] 429640.929346: smbus_reply:          i2c-4 a=053 f=0000 c=e0 I2C_BLOCK_DATA l=33 [ARG TYPE NOT FIELD BUT 2]
+              dd-91054 [010] 429640.929348: smbus_result:         i2c-4 a=053 f=0000 c=e0 I2C_BLOCK_DATA rd res=0
