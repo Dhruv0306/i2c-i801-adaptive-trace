@@ -47,3 +47,6 @@ tmp/
 # stray outputs from running in the repo root; deliverables live in logs/
 /*.log
 /t1-*.txt
+
+# Large .dat files
+*.dat
