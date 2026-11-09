@@ -2,16 +2,15 @@ root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# ls /sys/bus/i2c/devices/
 /sys/bus/i2c/devices/4-0053/eeprom
 root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# sha256sum /sys/bus/i2c/devices/4-0053/eeprom
 80c4c2ad97689a11f1370ee3a24e485ae1c90ab5319114e55e921ba1ffe95c0e  /sys/bus/i2c/devices/4-0053/eeprom
-root@user:/home/USER/Downloads/i2c-i801-adaptive-trace#    trace-cmd list -e smbus
+root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# trace-cmd list -e smbus
 smbus:smbus_result
 smbus:smbus_reply
 smbus:smbus_read
 smbus:smbus_write
-root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# trace-cmd record -e smbus -o logs/baseline/t1-eeprom.dat \
-       dd if=/sys/bus/i2c/devices/4-0053/eeprom of=/dev/null bs=512 count=1
+root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# trace-cmd record -e smbus -o logs/baseline/t1-eeprom.dat        dd if=/sys/bus/i2c/devices/4-0053/eeprom of=/dev/null bs=512 count=1
 1+0 records in
 1+0 records out
-512 bytes copied, 0.096895 s, 5.3 kB/s
+512 bytes copied, 0.0961582 s, 5.3 kB/s
 CPU0 data recorded at offset=0x2d7000
     0 bytes in size (0 uncompressed)
 CPU1 data recorded at offset=0x2d7000
@@ -21,7 +20,7 @@ CPU2 data recorded at offset=0x2d7000
 CPU3 data recorded at offset=0x2d7000
     0 bytes in size (0 uncompressed)
 CPU4 data recorded at offset=0x2d7000
-    122 bytes in size (4096 uncompressed)
+    280 bytes in size (4096 uncompressed)
 CPU5 data recorded at offset=0x2d8000
     0 bytes in size (0 uncompressed)
 CPU6 data recorded at offset=0x2d8000
@@ -31,9 +30,9 @@ CPU7 data recorded at offset=0x2d8000
 CPU8 data recorded at offset=0x2d8000
     0 bytes in size (0 uncompressed)
 CPU9 data recorded at offset=0x2d8000
-    102 bytes in size (4096 uncompressed)
-CPU10 data recorded at offset=0x2d9000
     0 bytes in size (0 uncompressed)
+CPU10 data recorded at offset=0x2d8000
+    389 bytes in size (4096 uncompressed)
 CPU11 data recorded at offset=0x2d9000
     0 bytes in size (0 uncompressed)
 CPU12 data recorded at offset=0x2d9000
@@ -51,62 +50,14 @@ CPU17 data recorded at offset=0x2d9000
 CPU18 data recorded at offset=0x2d9000
     0 bytes in size (0 uncompressed)
 CPU19 data recorded at offset=0x2d9000
-    501 bytes in size (4096 uncompressed)
+    0 bytes in size (0 uncompressed)
 root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# trace-cmd report logs/baseline/t1-eeprom.dat > logs/baseline/t1-eeprom-trace.txt
 root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# grep -c smbus_result logs/baseline/t1-eeprom-trace.txt
 18
-root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# trace-cmd record -e smbus -o logs/baseline/t1-eeprom.dat \
-       dd if=/sys/bus/i2c/devices/4-0053/eeprom of=/dev/null bs=512 count=1
+root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# trace-cmd record -e smbus -o logs/baseline/t1-eeprom-run2.dat        dd if=/sys/bus/i2c/devices/4-0053/eeprom of=/dev/null bs=512 count=1
 1+0 records in
 1+0 records out
-512 bytes copied, 0.0959887 s, 5.3 kB/s
-CPU0 data recorded at offset=0x2d7000
-    0 bytes in size (0 uncompressed)
-CPU1 data recorded at offset=0x2d7000
-    0 bytes in size (0 uncompressed)
-CPU2 data recorded at offset=0x2d7000
-    0 bytes in size (0 uncompressed)
-CPU3 data recorded at offset=0x2d7000
-    0 bytes in size (0 uncompressed)
-CPU4 data recorded at offset=0x2d7000
-    391 bytes in size (4096 uncompressed)
-CPU5 data recorded at offset=0x2d8000
-    0 bytes in size (0 uncompressed)
-CPU6 data recorded at offset=0x2d8000
-    0 bytes in size (0 uncompressed)
-CPU7 data recorded at offset=0x2d8000
-    0 bytes in size (0 uncompressed)
-CPU8 data recorded at offset=0x2d8000
-    0 bytes in size (0 uncompressed)
-CPU9 data recorded at offset=0x2d8000
-    0 bytes in size (0 uncompressed)
-CPU10 data recorded at offset=0x2d8000
-    0 bytes in size (0 uncompressed)
-CPU11 data recorded at offset=0x2d8000
-    0 bytes in size (0 uncompressed)
-CPU12 data recorded at offset=0x2d8000
-    88 bytes in size (4096 uncompressed)
-CPU13 data recorded at offset=0x2d9000
-    255 bytes in size (4096 uncompressed)
-CPU14 data recorded at offset=0x2da000
-    0 bytes in size (0 uncompressed)
-CPU15 data recorded at offset=0x2da000
-    0 bytes in size (0 uncompressed)
-CPU16 data recorded at offset=0x2da000
-    0 bytes in size (0 uncompressed)
-CPU17 data recorded at offset=0x2da000
-    0 bytes in size (0 uncompressed)
-CPU18 data recorded at offset=0x2da000
-    0 bytes in size (0 uncompressed)
-CPU19 data recorded at offset=0x2da000
-    0 bytes in size (0 uncompressed)
-root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# trace-cmd report logs/baseline/t1-eeprom.dat > logs/baseline/t1-eeprom-run2.txt
-root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# grep -c smbus_result logs/baseline/t1-eeprom-run2.txt
-18
-root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# trace-cmd record -e smbus -o logs/baseline/t1-eeprom.dat        dd if=/sys/bus/i2c/devices/4-0053/eeprom of=/dev/null bs=512 count=1
-1+0 records in
-1+0 records out
-512 bytes copied, 0.0960628 s, 5.3 kB/s
+512 bytes copied, 0.0970267 s, 5.3 kB/s
 CPU0 data recorded at offset=0x2d7000
     0 bytes in size (0 uncompressed)
 CPU1 data recorded at offset=0x2d7000
@@ -124,11 +75,62 @@ CPU6 data recorded at offset=0x2d7000
 CPU7 data recorded at offset=0x2d7000
     0 bytes in size (0 uncompressed)
 CPU8 data recorded at offset=0x2d7000
+    488 bytes in size (4096 uncompressed)
+CPU9 data recorded at offset=0x2d8000
     0 bytes in size (0 uncompressed)
-CPU9 data recorded at offset=0x2d7000
+CPU10 data recorded at offset=0x2d8000
+    199 bytes in size (4096 uncompressed)
+CPU11 data recorded at offset=0x2d9000
     0 bytes in size (0 uncompressed)
-CPU10 data recorded at offset=0x2d7000
-    551 bytes in size (4096 uncompressed)
+CPU12 data recorded at offset=0x2d9000
+    0 bytes in size (0 uncompressed)
+CPU13 data recorded at offset=0x2d9000
+    0 bytes in size (0 uncompressed)
+CPU14 data recorded at offset=0x2d9000
+    0 bytes in size (0 uncompressed)
+CPU15 data recorded at offset=0x2d9000
+    0 bytes in size (0 uncompressed)
+CPU16 data recorded at offset=0x2d9000
+    0 bytes in size (0 uncompressed)
+CPU17 data recorded at offset=0x2d9000
+    0 bytes in size (0 uncompressed)
+CPU18 data recorded at offset=0x2d9000
+    0 bytes in size (0 uncompressed)
+CPU19 data recorded at offset=0x2d9000
+    0 bytes in size (0 uncompressed)
+root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# trace-cmd report logs/baseline/t1-eeprom-run > logs/baseline/t1-eeprom-trace.txt
+logs/baseline/t1-eeprom-run2.dat  logs/baseline/t1-eeprom-run2.txt  logs/baseline/t1-eeprom-run3.txt  
+root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# trace-cmd report logs/baseline/t1-eeprom-run > logs/baseline/t1-eeprom-trace.txt
+logs/baseline/t1-eeprom-run2.dat  logs/baseline/t1-eeprom-run2.txt  logs/baseline/t1-eeprom-run3.txt  
+root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# trace-cmd report logs/baseline/t1-eeprom-run2.dat > logs/baseline/t1-eeprom-run2.txt
+root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# grep -c smbus_result logs/baseline/t1-eeprom-run2.txt
+18
+root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# trace-cmd record -e smbus -o logs/baseline/t1-eeprom-run3.dat        dd if=/sys/bus/i2c/devices/4-0053/eeprom of=/dev/null bs=512 count=1
+1+0 records in
+1+0 records out
+512 bytes copied, 0.0968843 s, 5.3 kB/s
+CPU0 data recorded at offset=0x2d7000
+    0 bytes in size (0 uncompressed)
+CPU1 data recorded at offset=0x2d7000
+    0 bytes in size (0 uncompressed)
+CPU2 data recorded at offset=0x2d7000
+    0 bytes in size (0 uncompressed)
+CPU3 data recorded at offset=0x2d7000
+    0 bytes in size (0 uncompressed)
+CPU4 data recorded at offset=0x2d7000
+    256 bytes in size (4096 uncompressed)
+CPU5 data recorded at offset=0x2d8000
+    0 bytes in size (0 uncompressed)
+CPU6 data recorded at offset=0x2d8000
+    0 bytes in size (0 uncompressed)
+CPU7 data recorded at offset=0x2d8000
+    0 bytes in size (0 uncompressed)
+CPU8 data recorded at offset=0x2d8000
+    0 bytes in size (0 uncompressed)
+CPU9 data recorded at offset=0x2d8000
+    0 bytes in size (0 uncompressed)
+CPU10 data recorded at offset=0x2d8000
+    0 bytes in size (0 uncompressed)
 CPU11 data recorded at offset=0x2d8000
     0 bytes in size (0 uncompressed)
 CPU12 data recorded at offset=0x2d8000
@@ -136,18 +138,18 @@ CPU12 data recorded at offset=0x2d8000
 CPU13 data recorded at offset=0x2d8000
     0 bytes in size (0 uncompressed)
 CPU14 data recorded at offset=0x2d8000
+    138 bytes in size (4096 uncompressed)
+CPU15 data recorded at offset=0x2d9000
     0 bytes in size (0 uncompressed)
-CPU15 data recorded at offset=0x2d8000
+CPU16 data recorded at offset=0x2d9000
     0 bytes in size (0 uncompressed)
-CPU16 data recorded at offset=0x2d8000
+CPU17 data recorded at offset=0x2d9000
+    362 bytes in size (4096 uncompressed)
+CPU18 data recorded at offset=0x2da000
     0 bytes in size (0 uncompressed)
-CPU17 data recorded at offset=0x2d8000
+CPU19 data recorded at offset=0x2da000
     0 bytes in size (0 uncompressed)
-CPU18 data recorded at offset=0x2d8000
-    0 bytes in size (0 uncompressed)
-CPU19 data recorded at offset=0x2d8000
-    0 bytes in size (0 uncompressed)
-root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# trace-cmd report logs/baseline/t1-eeprom.dat > logs/baseline/t1-eeprom-run3.txt
+root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# trace-cmd report logs/baseline/t1-eeprom-run3.dat > logs/baseline/t1-eeprom-run3.txt
 root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# grep -c smbus_result logs/baseline/t1-eeprom-run3.txt
 18
 root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# sha256sum /sys/bus/i2c/devices/4-0053/eeprom
@@ -160,6 +162,10 @@ To add an exception for this directory, call:
 
 	git config --global --add safe.directory /home/USER/Downloads/i2c-i801-adaptive-trace
 not ignored: add *.dat to .gitignore
-root@user:/home/USER/Downloads/i2c-i801-adaptive-trace#    sha256sum /usr/src/linux-7.2.15/drivers/i2c/busses/i2c-i801.c
+root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# git config --global --add safe.directory /home/USER/Downloads/i2c-i801-adaptive-trace
+root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# git check-ignore -v logs/baseline/t1-eeprom.dat || echo "not ignored: add *.dat to .gitignore"
+.gitignore:52:*.dat	logs/baseline/t1-eeprom.dat
+root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# sha256sum /usr/src/linux-7.2.15/drivers/i2c/busses/i2c-i801.c
 752d89228a166ec26ee11ccebe094896b8ded3600df9da3b998b825bf98b80d0  /usr/src/linux-7.2.15/drivers/i2c/busses/i2c-i801.c
 root@user:/home/USER/Downloads/i2c-i801-adaptive-trace# 
+
